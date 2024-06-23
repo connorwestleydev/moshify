@@ -249,8 +249,8 @@ a {
 }
 
 .btn--block {
-  width: 100%;
   display: inline-block;
+  width: 100%;
 }
 
 @media screen and (min-width: 1024px) {
@@ -476,8 +476,8 @@ a {
 
 .testimonial__image > .icon-container {
   position: absolute;
-  top: 3rem;
   right: -32px;
+  top: 3rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -493,8 +493,8 @@ a {
 
 /* Callouts */
 .callout {
-  padding: 4rem;
   border-radius: 5px;
+  padding: 4rem;
 }
 
 .callout--primary {
@@ -504,13 +504,13 @@ a {
 
 .callout__heading {
   color: #fff;
-  margin-top: 0;
   font-size: 3rem;
+  margin-top: 0;
 }
 
 .callout .btn {
-  justify-self: center;
   align-self: center;
+  justify-self: center;
 }
 
 .callout__content {
@@ -530,4 +530,37 @@ a {
     justify-self: start;
     margin: 0 2rem;
   }
+}
+
+/* Collapsibles */
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapsible__heading {
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+
+.collapsible__content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__content {
+  display: block;
+  max-height: 100vh;
+  opacity: 1;
 }
